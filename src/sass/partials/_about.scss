@@ -1,0 +1,63 @@
+@import 'bg-text';
+
+.page-about {
+  background: $gradient;
+
+  .about-text-wrap {
+    color: map-get($colors, white);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .about-text {
+      padding: 2.5em 1em 1em;
+      max-width: 840px;
+      font-size: 2em;
+      font-weight: 100;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: rgba(0, 0, 0, .55);
+        height: 100%;
+        width: 80%;
+        opacity: 0;
+        transform: scale(0) translate(0, 200px);
+        transform-origin: top right;
+        animation: scaleLeft $speed-slow $easing $delay forwards;
+      }
+    }
+  }
+}
+
+@keyframes scaleLeft {
+  to {
+    opacity: 1;
+    transform: scale(1) translate(0, 100px);
+  }
+}
+
+@media (min-width: 768px) {
+  .view-about {
+    overflow: hidden;
+
+    .about-text-wrap {
+      padding: 1em;
+      height: 100vh;
+      overflow: hidden;
+
+      .about-text {
+        padding: 1em;
+        font-size: 2.5em;
+      }
+    }
+  }
+}

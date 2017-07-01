@@ -1,0 +1,4 @@
+// SASS mixins
+@mixin transition($prop: all) {
+  transition: $prop $easing $speed;
+}

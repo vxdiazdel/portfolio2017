@@ -1,0 +1,144 @@
+.page-work {
+	background: $gradient;
+
+	.card {
+		padding: 1.5em 1em;
+		margin-bottom: 2em;
+		background: linear-gradient(
+		  to bottom right,
+			map-get($colors, blue),
+			darken(map-get($colors, blue), 25%)
+		);
+		color: map-get($colors, white);
+		border-radius: $border-radius;
+		box-shadow: $z-depth-deep;
+		position: relative;
+		height: 325px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include transition;
+
+		a {
+			color: #fff;
+		}
+
+		&:hover {
+			transform: translateY(-10px);
+			@include transition;
+
+			img {
+				opacity: .1;
+				@include transition;
+			}
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			max-width: 100%;
+			opacity: 1;
+			@include transition;
+		}
+
+		ul {
+			padding-left: 0;
+			list-style: none;
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-size: 1.5em;
+		}
+
+		&.mopro img,
+		&.pixel-motion img {
+			object-fit: contain;
+		}
+
+		&.mopro:hover img,
+		&.pixel-motion:hover img {
+			opacity: 0;
+		}
+
+		&.mopro {
+			background: #000;
+		}
+
+		&.techloot {
+			background: linear-gradient(
+			  to bottom right,
+        #6561ab,
+				darken(#6561ab, 25%)
+			);
+		}
+
+		&.tab-splash {
+			background: linear-gradient(
+			  to bottom right,
+				rgb(255, 175, 123),
+				darken(rgb(255, 175, 123), 25%)
+			);
+		}
+
+		&.pixel-motion {
+			background: #fff;
+
+			a {
+				color: #000;
+			}
+
+			img {
+				max-width: 90%;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			header,
+			main {
+				opacity: 0;
+			}
+
+			&:hover {
+
+				header,
+				main {
+					opacity: 1;
+				}
+			}
+		}
+
+		&.omgnoway {
+			background: linear-gradient(
+				to bottom right,
+				#548df6,
+				darken(#548df6, 25%)
+			);
+		}
+
+		&.wtfemojis {
+			background: linear-gradient(
+			  to bottom right,
+				#00bea5,
+				darken(#00bea5, 25%)
+			);
+		}
+	}
+
+	.jobs {
+		padding: 75px 0;
+		animation-delay: .5s;
+	}
+
+	.col-left {
+		transform: translateY(-25px);
+	}
+}
+
+@media (min-width: 768px) {
+	.view-work .jobs .job-title {
+		font-size: 1em;
+	}
+}

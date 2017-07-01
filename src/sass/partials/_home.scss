@@ -1,0 +1,67 @@
+.view-home {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+	color: #000;
+  background: map-get($colors, white);
+
+	h1, h2 {
+		overflow-y: hidden;
+		overflow-x: visible;
+
+    span {
+      display: block;
+    }
+	}
+
+	h1 {
+		height: 55px;
+		font-size: 2.85em;
+		font-weight: 100;
+		margin-bottom: 0;
+
+		.slideUp {
+      animation-delay: .25s;
+		}
+	}
+
+	h2 {
+		height: 50px;
+		font-size: 1.85em;
+		margin-top: 0;
+
+		.slideUp {
+      animation-delay: .5s;
+		}
+	}
+}
+
+.canvas .view-home {
+  background: none;
+
+  canvas {
+    position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 768px) {
+	.view-home {
+
+		h1 {
+			font-size: 4em;
+		}
+
+		h2 {
+			font-size: 3em;
+		}
+	}
+}

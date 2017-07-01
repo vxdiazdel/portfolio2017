@@ -1,0 +1,21 @@
+// SASS variables
+
+$colors: (
+  white: #fefefe,
+  blue: #191aff,
+  purple: #390097,
+  grey: #dadfe1,
+  darkgrey: #8f9d9e,
+  black: #151515
+);
+
+$speed: 1s;
+$speed-slow: 1.5s;
+$delay: .25s;
+$easing: cubic-bezier(0.19, 1, 0.22, 1);
+
+$border-radius: 4px;
+$gradient: linear-gradient(to bottom, map-get($colors, blue), map-get($colors, purple));
+
+$z-depth-shallow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
+$z-depth-deep: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);

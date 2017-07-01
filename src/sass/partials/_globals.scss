@@ -1,0 +1,26 @@
+// Global styles
+
+body {
+	line-height: 1.42857143;
+	font-size: 12px;
+	font-family: 'Raleway', sans-serif;
+}
+
+a {
+
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+a, a:hover, a:active, a:focus {
+	color: map-get($colors, blue);
+}
+
+@media (min-width: 768px) {
+	body {
+		font-size: 14px;
+	}
+}

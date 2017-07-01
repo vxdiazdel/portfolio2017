@@ -1,0 +1,58 @@
+// Global animations
+
+.slideUp {
+	opacity: 0;
+	transform: translateY(100%);
+	animation: slideUp $speed-slow $easing forwards;
+}
+
+@keyframes slideUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fadeIn {
+	opacity: 0;
+	animation: fadeIn $speed ease-in forwards;
+}
+
+@keyframes fadeIn {
+	to { opacity: 1; }
+}
+
+.fadeDown {
+	opacity: 0;
+	transform: translateY(-25%);
+	animation: fadeDown $speed-slow $easing forwards;
+}
+
+@keyframes fadeDown {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes loader {
+	0% {
+		border-radius: 50%;
+		transform: rotate(0) scale(1);
+	}
+	50% {
+		border-radius: 0;
+		transform: rotate(180deg) scale(1.25);
+	}
+	100% {
+		border-radius: 50%;
+		transform: rotate(360deg) scale(1);
+	}
+}
+
+@keyframes scaleOut {
+	to {
+		opacity: 0;
+		transform: scale(0);
+	}
+}
