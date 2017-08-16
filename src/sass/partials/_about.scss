@@ -2,6 +2,7 @@
 
 .page-about {
   background: $gradient;
+  min-height: 100vh;
 
   .about-text-wrap {
     color: map-get($colors, white);
